@@ -14,7 +14,15 @@ class Background extends PureComponent {
     this.props.fetchBackgrounds()
   }
 
+
+
   render(){
+    // const images = this.props.backgrounds.map((background) => background.image)
+    //
+    // const divStyle = {
+    //   backgroundImage: "url("+ `${images[0]}` +")",
+    //   backgroundSize: 'cover',
+    // }
     return (
       <div className="background">
         {this.props.backgrounds.map(this.renderBackground)}

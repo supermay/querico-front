@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
-import Background from './components/Background'
-import Header from './components/Header'
+
+import Background from './components/Background';
+import Navigation from './components/Navigation';
+
+import PropTypes from 'prop-types';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import muiTheme from './styles/theme';
 
 class App extends Component {
+  static childContextTypes = {
+    muiTheme: PropTypes.object.isRequired,
+  }
+
+  getChildContext() {
+    return { muiTheme }
+  }
+
   render() {
     return (
-      <div className="App">
-        <Header content="QueRico Woerden"/>
-        <Background/>
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div className="App">
+          <Navigation />
+           <Background/>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

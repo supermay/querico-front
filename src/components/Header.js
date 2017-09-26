@@ -3,10 +3,8 @@ import './Header.css';
 
 class Header extends PureComponent {
   render(){
-    return(
-      <div className="querico">
-        <h1>{this.props.content}</h1>
-      </div>
+    return (
+      <h2 className='querico'>{this.props.content}</h2>
     )
   }
 }
