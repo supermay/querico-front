@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import { connect } from 'react-redux';
-import fetchBackgrounds from '../actions/fetch';
+import { fetchBackgrounds } from '../actions/fetch';
 
 class Background extends PureComponent {
   renderBackground = (background,index) => {
