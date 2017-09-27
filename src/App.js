@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Background from './components/Background';
 import Navigation from './components/Navigation';
 
 import PropTypes from 'prop-types';
@@ -21,7 +20,7 @@ class App extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
           <Navigation />
-           <Background/>
+           {this.props.children}
         </div>
       </MuiThemeProvider>
     );
