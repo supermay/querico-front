@@ -16,7 +16,9 @@ class CakeContainer extends PureComponent {
 
   render(){
     return(
-      <p>Cake Container</p>
+      <div className="cake-container">
+        {this.props.cakes.map(this.renderCakes)}
+      </div>
     )
   }
 }

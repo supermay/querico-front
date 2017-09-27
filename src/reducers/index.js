@@ -1,5 +1,7 @@
 import backgrounds from './backgrounds'
+import cakes from './cakes'
 
 export default {
-  backgrounds: backgrounds
+  backgrounds: backgrounds,
+  cakes: cakes
 }
