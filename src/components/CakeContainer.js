@@ -3,10 +3,17 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { fetchCakes } from '../actions/fetch';
 
+import { Link } from 'react-router';
+
 class CakeContainer extends PureComponent {
   renderCakes = (cake,index) => {
     return (
-      <p key={index}>{cake.name}</p>
+      <div key={index}>
+        <Link to={`/cakes/${cake.id}`}>
+          <p>{cake.name}</p>
+        </Link>
+        {/* <p>{cake.flavors.map(flavor => flavor.name)}</p> */}
+      </div>
     )
   }
 
@@ -16,7 +23,9 @@ class CakeContainer extends PureComponent {
 
   render(){
     return(
-      <p>Cake Container</p>
+      <div className="cake-container">
+        {this.props.cakes.map(this.renderCakes)}
+      </div>
     )
   }
 }

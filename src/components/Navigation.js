@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import AppBar from 'material-ui/AppBar';
 import CakeIcon from '../images/cake.svg';
-import './Navigation.css';
 
 import FlatButton from 'material-ui/FlatButton';
 
