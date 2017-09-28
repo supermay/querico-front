@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 export const FETCHED_BACKGROUNDS = 'FETCHED_BACKGROUNDS'
-export const FETCHED_CAKES = 'FETCHED_BACKGROUNDS'
+export const FETCHED_CAKES = 'FETCHED_CAKES'
 
 const RAILS_HOST = 'http://localhost:3000/api'
 
