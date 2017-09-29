@@ -11,15 +11,20 @@ class CakeItem extends PureComponent {
   renderCake = () => {
     const cakeId = parseInt(this.props.params.cakeId,10);
     const cake = this.props.cakes.find(cake => cake.id === cakeId);
-    const flavors = cake.flavors || []
+    const flavors = cake.flavors
+    const choose_flavor = cake.flavors.length !== 0
+
     return(
-      <div key={cakeId}>
-        <h2>{cake.name}</h2>
-        <p>Flavors:</p>
-        <ul>
-          {flavors.map((flavor => <li>{flavor.name}</li>))}
-        </ul>
-      </div>
+      <form key={cakeId}>
+        <p id='cake-name'>{cake.name}</p>
+        {console.log(choose_flavor)}
+        { choose_flavor &&
+          <p>{'Flavors:  '}
+            <select>{flavors.map(flavor => <option value={flavor.name}>{flavor.name}</option>)}</select>
+          </p>
+          }
+          <button>select this cake</button>
+      </form>
     )
   }
 

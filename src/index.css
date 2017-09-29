@@ -11,3 +11,8 @@
 div > div > div {
   line-height: 0px !important;
 }
+
+#cake-name {
+  font-family: 'Niconne', cursive;
+  font-size: 40px;
+}
